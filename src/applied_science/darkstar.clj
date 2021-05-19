@@ -32,8 +32,8 @@ function readFile(path, callback) {
 }
 var fs = {'readFile':readFile};
 ")
-      (.eval (slurp (clojure.java.io/resource "vega.js")))
-      (.eval (slurp (clojure.java.io/resource "vega-lite.js"))))))
+      (.eval (slurp (clojure.java.io/resource "vega.min.js")))
+      (.eval (slurp (clojure.java.io/resource "vega-lite.min.js"))))))
 
 (defn make-js-fn [js-text]
   (let [^java.util.function.Function f (.eval engine js-text)]
